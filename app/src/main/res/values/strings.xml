@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab2E</string>
+    <string-array name="options">
+        <item>Words</item>
+        <item>Characters</item>
+    </string-array>
+    <string name="noChars">Number of characters: </string>
+    <string name="noWords">Number of words: </string>
+</resources>
