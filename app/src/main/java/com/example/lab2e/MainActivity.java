@@ -14,8 +14,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText typeHere;
-    private Spinner dropDownBar;
+    private EditText etInput;
+    private Spinner spCountingSelection;
     private TextView twOutput;
     private Resources res;
 
@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dropDownBar = findViewById(R.id.dropdown);
+        spCountingSelection = findViewById(R.id.dropdown);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.options,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item );
-        dropDownBar.setAdapter(adapter);
+        spCountingSelection.setAdapter(adapter);
 
 
-        typeHere = (EditText)findViewById(R.id.editText);
+        etInput = (EditText)findViewById(R.id.editText);
 
         twOutput = (TextView) findViewById(R.id.twOutput);
 
@@ -38,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickButton(View view) {
-        String input = typeHere.getText().toString();
+        String input = etInput.getText().toString();
         if(input.equals("")) {
             Context context = getApplicationContext();
             String text = "Whoopsie you suck ";
             Toast toast = Toast.makeText(context, text, Toast.LENGTH_SHORT);
             toast.show();
         } else {
-            String spinnerOpt = dropDownBar.getSelectedItem().toString();
+            String spinnerOpt = spCountingSelection.getSelectedItem().toString();
             if(spinnerOpt.equals("Characters")) {
                 twOutput.setText(res.getString(R.string.noChars) + WordCounter.Characters(input));
             } else if(spinnerOpt.equals("Words")) {
