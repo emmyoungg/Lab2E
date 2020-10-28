@@ -5,15 +5,7 @@ public class WordCounter {
         return str.length();
     }
     public static int Words(String str) {
-//        int count = 0 ;
-////
-////        for (int i = 0 ; i<str.length();i++){
-////            int cur = str.charAt(i);
-////            if( cur ==' ' || cur == '.' || cur ==',' ){
-////                count++;
-////            }
-////        }
-////        return count;
+
         int wordCount = 0;
 
         boolean isWord = false;
