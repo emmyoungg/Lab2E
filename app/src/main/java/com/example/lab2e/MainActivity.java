@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
         } else {
             String spinnerOpt = spCountingSelection.getSelectedItem().toString();
             if(spinnerOpt.equals("Characters")) {
-                twOutput.setText(res.getString(R.string.noChars) + WordCounter.Characters(input));
+                twOutput.setText(res.getString(R.string.noChars) + WordCounter.countCharacters(input));
             } else if(spinnerOpt.equals("Words")) {
                 //calc
-                twOutput.setText(res.getString(R.string.noWords) + WordCounter.Words(input));
+                twOutput.setText(res.getString(R.string.noWords) + WordCounter.countWords(input));
             }
             //
         }

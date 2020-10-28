@@ -1,10 +1,10 @@
 package com.example.lab2e;
 
 public class WordCounter {
-    public static int Characters(String str) {
+    public static int countCharacters(String str) {
         return str.length();
     }
-    public static int Words(String str) {
+    public static int countWords(String str) {
 
         int wordCount = 0;
 
